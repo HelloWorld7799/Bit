@@ -1,0 +1,32 @@
+<!--
+@description       : 
+@author            : ChangeMeIn@UserSettingsUnder.SFDoc
+@group             : 
+@last modified on  : 05-28-2022
+@last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Looping Testing"
+    icon-name="standard:account"
+  >
+    <ul class="forEach">
+      <template for:each={fruits} for:item="fruit">
+        <li key={fruit}>{fruit}</li>
+      </template>
+    </ul>
+    <div>.........</div>
+
+    <ul class="iterator">
+      <template iterator:it={fruits}>
+        <li key={it.value}>
+          {fruit}
+          <div if:true={it.first}>Start the Game</div>
+          <div>{it.value}</div>
+          <div if:true={it.last}>End the Game</div>
+        </li>
+      </template>
+    </ul>
+  </lightning-card>
+</template>

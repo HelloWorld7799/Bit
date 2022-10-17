@@ -1,0 +1,55 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-23-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-layout multiple-rows style="background-color: rgb(0, 255, 115);">
+        <lightning-layout-item size="4" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <div class="custom-box">
+                <lightning-combobox
+                   variant="label-stacked" 
+                    label="Locality"
+                    value={location}
+                    placeholder="Select Locality"
+                    options={locationOptions}
+                    field-level-help="Search Property based on Locality" 
+                    onchange={handleLocationChange}
+                    ></lightning-combobox>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size=4 padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <div class="custom-box">
+                <lightning-combobox
+                        variant="label-stacked" 
+                        label="No of BedRoom"
+                        value={noOfBedRoom} 
+                        options={noOfBedRoomOptions}
+                        placeholder="Select"
+                        field-level-help="Search Property based on No of Bed room"
+                        onchange={handleBedRoomChange}
+                 ></lightning-combobox>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size=4 padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <div class="custom-box">
+                <lightning-combobox
+                        variant="label-stacked" 
+                        label="No of BathRoom"
+                        value={noOfBathRoom}
+                        options={noOfBathRoomOptions}
+                        placeholder="Select"
+                        field-level-help="Search Property based on No of Bathrooms"
+                        onchange={handleBathRoomChange}
+                 ></lightning-combobox>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="number" value={maxBudget} field-level-help="Search Property based on the Budget" name="maxBudget"
+            label="Maximum Budget" placeholder="Enter maximum Budget" onchange={handlebudgetChange}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    
+</template>

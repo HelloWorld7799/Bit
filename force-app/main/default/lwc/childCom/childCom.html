@@ -1,0 +1,15 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-29-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <template if:true={userDetails}>
+    <div class="userName">{userDetails.Name}</div>
+  </template>
+  <template if:false={userDetails}>
+    <p>Sorry No Data</p>
+  </template>
+</template>
